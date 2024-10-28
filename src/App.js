@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Grid, Paper } from "@mui/material";
+import { Box, Grid, Paper } from "@mui/material";
 import { ResponsiveContainer } from "recharts";
 import Headers from "./Headers";
 import SavingGoal from "./SavingGoal";
