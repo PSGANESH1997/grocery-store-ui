@@ -8,7 +8,7 @@ const Banner = () => {
     <Container>
       <Card bgColor="#09900d">
         <IconWrapper>
-          <LocalShippingIcon style={{ fontSize: "30px", color: "white" }} />
+          <LocalShippingIcon style={{ fontSize: "20px", color: "white" }} />
         </IconWrapper>
         <TextWrapper>
           <Title>Free delivery over $50</Title>
@@ -26,7 +26,7 @@ const Banner = () => {
       </Card>
       <Card bgColor="#b24a4a">
         <IconWrapper>
-          <DiscountIcon style={{ fontSize: "30px", color: "white" }} />
+          <DiscountIcon style={{ fontSize: "20px", color: "white" }} />
         </IconWrapper>
         <TextWrapper>
           <Title>Organic Food</Title>
@@ -54,7 +54,7 @@ const Container = styled.div`
   justify-content: center;
   background-color: #37612a;
   padding: 20px;
-  height: 400px;
+  height: 310px;
 `;
 
 // Styling for each card component
@@ -87,14 +87,16 @@ const TextWrapper = styled.div`
 // Title text styling
 const Title = styled.h2`
   font-size: 20px;
-  margin: 0 0 10px;
+  margin-top: 40px;
+  margin-bottom: 40px; /* Set equal spacing */
 `;
 
 // Description text styling
 const Description = styled.p`
-  font-size: 14px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 40px; /* Set equal spacing */
 `;
 
 // Button styling
@@ -107,6 +109,7 @@ const Button = styled.button`
   font-size: 14px;
   width: 120px;
   height: 40px;
+  margin-bottom: 15px; /* Set equal spacing */
 
   &:hover {
     text-decoration: underline;
@@ -116,10 +119,9 @@ const Button = styled.button`
 // New ImageWrapper styling
 const ImageWrapper = styled.div`
   position: absolute;
-  right: 20px;
-  bottom: 60px;
+  right: 1px;
   width: 200px;
-  height: auto;
+  height: 310px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,7 +130,7 @@ const ImageWrapper = styled.div`
 // Image styling
 const Image = styled.img`
   max-width: 100%;
-  height: 200px;
+  height: 270px;
 `;
 
 export default Banner;

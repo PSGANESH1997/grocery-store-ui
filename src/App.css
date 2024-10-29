@@ -3,5 +3,9 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .header-style {
-    padding: 20px 20px;
+    margin-top: 20px!important;
+}
+
+.over-all-component{
+    width: 100%;
 }

@@ -18,6 +18,7 @@ const data = [
       {
         image:
           "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+        name: "Orange 1kg",
         price: "$2",
         originalPrice: "$5.99",
         rating: 4,

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ProductCard from "./Components/ProductCard";
+import Products from "./Components/Products";
 import Banner from "./Components/Banner";
 import FooterGrid from "./Components/FooterGrid";
 import CountDown from "./Components/CountDown";
@@ -52,6 +53,7 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
@@ -60,6 +62,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
@@ -68,7 +71,9 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Potatoes 1kg",
+      type: "Fruits",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.5,
@@ -76,6 +81,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
+      typeName: "Fruits",
       title: "Tomato 200g",
       price: "$0.30",
       discountedPrice: "$0.99",
@@ -84,6 +90,7 @@ function ProductShow() {
     {
       image:
         "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
+      typeName: "Vegetables",
       title: "Broccoli 1kg",
       price: "$1.50",
       discountedPrice: "$2.99",
@@ -91,6 +98,7 @@ function ProductShow() {
     },
     {
       image: "https://specialtyproduce.com/sppics/601.png",
+      typeName: "Vegetables",
       title: "Green Beans 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -99,6 +107,7 @@ function ProductShow() {
     {
       image:
         "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
+      typeName: "Vegetables",
       title: "Carrot 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -107,6 +116,7 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
@@ -115,6 +125,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
@@ -123,7 +134,9 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Potatoes 1kg",
+      type: "Fruits",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.5,
@@ -131,6 +144,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
+      typeName: "Fruits",
       title: "Tomato 200g",
       price: "$0.30",
       discountedPrice: "$0.99",
@@ -139,6 +153,7 @@ function ProductShow() {
     {
       image:
         "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
+      typeName: "Vegetables",
       title: "Broccoli 1kg",
       price: "$1.50",
       discountedPrice: "$2.99",
@@ -146,6 +161,7 @@ function ProductShow() {
     },
     {
       image: "https://specialtyproduce.com/sppics/601.png",
+      typeName: "Vegetables",
       title: "Green Beans 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -154,6 +170,7 @@ function ProductShow() {
     {
       image:
         "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
+      typeName: "Vegetables",
       title: "Carrot 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -162,6 +179,7 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
@@ -170,6 +188,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
@@ -178,7 +197,9 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Potatoes 1kg",
+      type: "Fruits",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.5,
@@ -186,6 +207,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
+      typeName: "Fruits",
       title: "Tomato 200g",
       price: "$0.30",
       discountedPrice: "$0.99",
@@ -194,6 +216,7 @@ function ProductShow() {
     {
       image:
         "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
+      typeName: "Vegetables",
       title: "Broccoli 1kg",
       price: "$1.50",
       discountedPrice: "$2.99",
@@ -201,6 +224,7 @@ function ProductShow() {
     },
     {
       image: "https://specialtyproduce.com/sppics/601.png",
+      typeName: "Vegetables",
       title: "Green Beans 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -209,6 +233,7 @@ function ProductShow() {
     {
       image:
         "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
+      typeName: "Vegetables",
       title: "Carrot 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -217,6 +242,7 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
@@ -225,6 +251,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
@@ -233,7 +260,9 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Potatoes 1kg",
+      type: "Fruits",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.5,
@@ -241,6 +270,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
+      typeName: "Fruits",
       title: "Tomato 200g",
       price: "$0.30",
       discountedPrice: "$0.99",
@@ -249,6 +279,7 @@ function ProductShow() {
     {
       image:
         "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
+      typeName: "Vegetables",
       title: "Broccoli 1kg",
       price: "$1.50",
       discountedPrice: "$2.99",
@@ -256,6 +287,7 @@ function ProductShow() {
     },
     {
       image: "https://specialtyproduce.com/sppics/601.png",
+      typeName: "Vegetables",
       title: "Green Beans 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -264,6 +296,7 @@ function ProductShow() {
     {
       image:
         "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
+      typeName: "Vegetables",
       title: "Carrot 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -272,6 +305,7 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
@@ -280,6 +314,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
@@ -288,7 +323,9 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Potatoes 1kg",
+      type: "Fruits",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.5,
@@ -296,6 +333,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
+      typeName: "Fruits",
       title: "Tomato 200g",
       price: "$0.30",
       discountedPrice: "$0.99",
@@ -304,6 +342,7 @@ function ProductShow() {
     {
       image:
         "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
+      typeName: "Vegetables",
       title: "Broccoli 1kg",
       price: "$1.50",
       discountedPrice: "$2.99",
@@ -311,6 +350,7 @@ function ProductShow() {
     },
     {
       image: "https://specialtyproduce.com/sppics/601.png",
+      typeName: "Vegetables",
       title: "Green Beans 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -319,6 +359,7 @@ function ProductShow() {
     {
       image:
         "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
+      typeName: "Vegetables",
       title: "Carrot 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -327,6 +368,7 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
@@ -335,6 +377,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
@@ -343,7 +386,9 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Potatoes 1kg",
+      type: "Fruits",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.5,
@@ -351,6 +396,7 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
+      typeName: "Fruits",
       title: "Tomato 200g",
       price: "$0.30",
       discountedPrice: "$0.99",
@@ -359,6 +405,7 @@ function ProductShow() {
     {
       image:
         "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
+      typeName: "Vegetables",
       title: "Broccoli 1kg",
       price: "$1.50",
       discountedPrice: "$2.99",
@@ -366,6 +413,7 @@ function ProductShow() {
     },
     {
       image: "https://specialtyproduce.com/sppics/601.png",
+      typeName: "Vegetables",
       title: "Green Beans 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -374,6 +422,7 @@ function ProductShow() {
     {
       image:
         "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
+      typeName: "Vegetables",
       title: "Carrot 250g",
       price: "$1",
       discountedPrice: "$1.99",
@@ -382,6 +431,7 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
@@ -390,107 +440,13 @@ function ProductShow() {
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.1,
-    },
-    {
-      image:
-        "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
-      title: "Potatoes 1kg",
-      price: "$1",
-      discountedPrice: "$1.99",
-      rating: 4.5,
-    },
-    {
-      image:
-        "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
-      title: "Tomato 200g",
-      price: "$0.30",
-      discountedPrice: "$0.99",
-      rating: 3.5,
-    },
-    {
-      image:
-        "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
-      title: "Broccoli 1kg",
-      price: "$1.50",
-      discountedPrice: "$2.99",
-      rating: 5,
-    },
-    {
-      image: "https://specialtyproduce.com/sppics/601.png",
-      title: "Green Beans 250g",
-      price: "$1",
-      discountedPrice: "$1.99",
-      rating: 4,
-    },
-    {
-      image:
-        "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
-      title: "Carrot 250g",
-      price: "$1",
-      discountedPrice: "$1.99",
-      rating: 4,
-    },
-    {
-      image:
-        "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
-      title: "Radish 500g",
-      price: "$2",
-      discountedPrice: "$3.99",
-      rating: 4,
-    },
-    {
-      image:
-        "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
-      title: "Garlic 1kg",
-      price: "$1",
-      discountedPrice: "$1.99",
-      rating: 4.1,
-    },
-    {
-      image:
-        "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
-      title: "Potatoes 1kg",
-      price: "$1",
-      discountedPrice: "$1.99",
-      rating: 4.5,
-    },
-    {
-      image:
-        "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
-      title: "Tomato 200g",
-      price: "$0.30",
-      discountedPrice: "$0.99",
-      rating: 3.5,
-    },
-    {
-      image:
-        "https://www.seekpng.com/png/full/915-9159355_broccoli-nutrition.png",
-      title: "Broccoli 1kg",
-      price: "$1.50",
-      discountedPrice: "$2.99",
-      rating: 5,
-    },
-    {
-      image: "https://specialtyproduce.com/sppics/601.png",
-      title: "Green Beans 250g",
-      price: "$1",
-      discountedPrice: "$1.99",
-      rating: 4,
-    },
-    {
-      image:
-        "https://individualfitnessllc.com/wp-content/uploads/2022/04/health-benefits-of-carrots.jpg",
-      title: "Carrot 250g",
-      price: "$1",
-      discountedPrice: "$1.99",
-      rating: 4,
     },
   ];
-
   const productsCard = [
     {
       image:
@@ -558,12 +514,13 @@ function ProductShow() {
   };
 
   return (
-    <AppContainer>
+    <AppContainer style={{ marginTop: "75px" }}>
       <Slider {...settings}>
         {products.map((product, index) => (
           <ProductCardWrapper key={index}>
-            <ProductCard
+            <Products
               image={product.image}
+              typeName={product.typeName}
               title={product.title}
               price={product.price}
               discountedPrice={product.discountedPrice}
@@ -579,25 +536,19 @@ function ProductShow() {
         <HeaderRow>
           <h2>Daily Best Sells</h2>
           {/* Navigation Tabs */}
-          <Box display="flex" gap={3} alignItems="center">
+          <Box display="flex" gap={2} alignItems="center">
             {tabs.map((tab) => (
               <Button
                 key={tab}
-                variant={selectedTab === tab ? "contained" : "text"}
                 color={selectedTab === tab ? "success" : "inherit"}
                 onClick={() => setSelectedTab(tab)} // Update the selected tab on click
                 sx={{
                   borderRadius: 20,
                   textTransform: "none",
                   fontWeight: selectedTab === tab ? "bold" : "normal",
-                  backgroundColor:
-                    selectedTab === tab ? "#2ecc71" : "transparent",
-                  color: selectedTab === tab ? "white" : "inherit",
+                  color: selectedTab === tab ? "#f19f09" : "#fffff",
                   fontSize: "1.1rem",
-                  "&:hover": {
-                    backgroundColor:
-                      selectedTab === tab ? "#27ae60" : "transparent",
-                  },
+                  backgroundColor: "#37612a",
                 }}
               >
                 {tab}
@@ -612,6 +563,7 @@ function ProductShow() {
             <ProductCardWrapper key={index}>
               <ProductCard
                 image={product.image}
+                typeName={product.typeName}
                 title={product.title}
                 price={product.price}
                 discountedPrice={product.discountedPrice}

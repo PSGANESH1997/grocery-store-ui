@@ -6,14 +6,14 @@ const SignupBanner = () => {
     <Box
       style={{
         marginTop: "15px",
-        height: "450px",
+        height: "367px",
         backgroundColor: "rgb(171 113 58)",
         padding: "20px",
         borderRadius: "8px",
       }}
       display="flex"
       flexDirection="column"
-      gap="25px" // Adjust the gap size as desired
+      gap="10px" // Adjust the gap size as desired
     >
       <Typography variant="h6" gutterBottom>
         10% OFF

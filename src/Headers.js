@@ -13,6 +13,7 @@ import { Search, Notifications, Settings } from "@mui/icons-material";
 
 function Headers({ setDashboard }) {
   const tabs = [
+    "Home",
     "Dashboard",
     "Balances",
     "Transactions",
@@ -21,25 +22,29 @@ function Headers({ setDashboard }) {
     "Products",
   ];
   // Define state to keep track of the selected tab
-  const [selectedTab, setSelectedTab] = useState(tabs[4]);
+  const [selectedTab, setSelectedTab] = useState(tabs[5]);
 
   useEffect(() => {
-    if (selectedTab === tabs[5]) {
-      setDashboard(true);
+    if (selectedTab === tabs[6]) {
+      setDashboard(selectedTab);
+    } else if (selectedTab === tabs[1]) {
+      setDashboard(selectedTab);
     } else {
-      setDashboard(false);
+      setDashboard(selectedTab);
     }
     // eslint-disable-next-line
   }, [selectedTab]);
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       color="default"
       sx={{
+        width: "99%",
+        marginTop: "0.3px",
         backgroundColor: "#f5f5f5",
-        borderRadius: 20,
-        paddingY: 1,
+        borderRadius: 40,
+        paddingY: 0.6,
         paddingX: 2,
         boxShadow: "none",
       }}
@@ -69,7 +74,7 @@ function Headers({ setDashboard }) {
         </Box>
 
         {/* Navigation Tabs */}
-        <Box display="flex" gap={3} alignItems="center">
+        <Box display="flex" gap={1} alignItems="center">
           {tabs.map((tab) => (
             <Button
               key={tab}

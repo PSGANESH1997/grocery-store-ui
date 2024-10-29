@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography, Paper, Button, Divider } from "@mui/material";
+import { Box, Typography, Paper, Button } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import CrisisAlertIcon from "@mui/icons-material/CrisisAlert";
 import {
   CircularProgressbarWithChildren,
   buildStyles,
@@ -15,12 +16,10 @@ const SavingGoal = () => {
 
   return (
     <Paper
-      elevation={3}
+      elevation={2}
       sx={{
-        width: 400,
-        height: 440,
-        margin: 3,
-        padding: 5,
+        height: 441,
+        padding: 4,
         borderRadius: 4,
         textAlign: "center",
         position: "relative",
@@ -33,7 +32,7 @@ const SavingGoal = () => {
           justifyContent: "space-between",
           alignItems: "center",
           mb: 2,
-          marginBottom: 5,
+          marginBottom: 6,
         }}
       >
         <Typography variant="h6" sx={{ fontWeight: "bold" }}>
@@ -72,7 +71,7 @@ const SavingGoal = () => {
               border: "1px solid #e0e0e0",
             }}
           >
-            <AttachMoneyIcon fontSize="small" sx={{ color: "gray" }} />
+            <EmojiEventsIcon fontSize="medium" sx={{ color: "gray" }} />
             <Box sx={{ textAlign: "left", ml: 1 }}>
               <Typography variant="body2" color="textSecondary">
                 Target Achieved
@@ -92,7 +91,7 @@ const SavingGoal = () => {
               border: "1px solid #e0e0e0",
             }}
           >
-            <AttachMoneyIcon fontSize="small" sx={{ color: "gray" }} />
+            <CrisisAlertIcon fontSize="medium" sx={{ color: "gray" }} />
             <Box sx={{ textAlign: "left", ml: 1 }}>
               <Typography variant="body2" color="textSecondary">
                 This Month Target
@@ -105,7 +104,7 @@ const SavingGoal = () => {
         </Box>
 
         {/* Progress Bar on the Right */}
-        <Box sx={{ width: 150, textAlign: "center" }}>
+        <Box sx={{ width: 170, textAlign: "center" }}>
           <CircularProgressbarWithChildren
             value={achievedPercentage}
             styles={buildStyles({
@@ -127,7 +126,7 @@ const SavingGoal = () => {
       </Box>
 
       {/* Divider */}
-      <Divider sx={{ my: 2 }} />
+      {/* <Divider sx={{ my: 2 }} /> */}
 
       {/* Footer Row: Add Client Button */}
       <Box sx={{ mt: 2 }}>

@@ -57,7 +57,7 @@ const BrandText = styled.span`
   }
 `;
 
-const ProductCard = ({
+const HomeProduct = ({
   image,
   typeName,
   title,
@@ -106,4 +106,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export default HomeProduct;
