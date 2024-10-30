@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
-import HomeProduct from "./HomeProduct"; // Assuming ProductCard is already created
+import Products from "./Products";
 import { RotatingLines } from "react-loader-spinner"; // Importing RotatingLines
 
 // Dummy data - in a real app, this would be fetched from an API
@@ -474,7 +474,7 @@ const Home = () => {
     <CenteredContainer style={{ marginTop: "70px" }}>
       <ProductGrid>
         {products.map((product, index) => (
-          <HomeProduct
+          <Products
             key={index}
             image={product.image}
             typeName={product.typeName}

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Card = styled.div`
   background: #ffffff;
@@ -10,7 +11,7 @@ const Card = styled.div`
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   text-align: left;
   margin: 7px;
-  width: 230px;
+  width: 233px;
 `;
 
 const Price = styled.p`
@@ -22,10 +23,15 @@ const Price = styled.p`
 const Button = styled.button`
   background-color: #ffa500;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.4rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; // Space between icon and text
+  margin-top: auto; // Pushes button to the bottom if space allows
   &:hover {
     background-color: #ff8c00;
   }
@@ -99,7 +105,9 @@ const Products = ({
           <Price>
             <strike>{discountedPrice}</strike> <span>{price}</span>
           </Price>
-          <Button>Add to Cart</Button>
+          <Button>
+            <ShoppingCartIcon fontSize="small" /> Add to Cart
+          </Button>
         </Row>
       </Card>
     </div>
