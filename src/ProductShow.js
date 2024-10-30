@@ -10,6 +10,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box, Button } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { IconButton } from "@mui/material";
 
 const AppContainer = styled.div`
   background-color: #37612a;
@@ -36,7 +39,7 @@ const DailyDealsSection = styled.div`
 const HeaderRow = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin-bottom: 1rem;
   text-align: start;
 `;
@@ -451,34 +454,50 @@ function ProductShow() {
     {
       image:
         "https://www.onezeros.in/cdn/shop/products/radish-white-onezeros-in-35305091530950.png?v=1722187808&width=713",
+      typeName: "Vegetables",
       title: "Radish 500g",
       price: "$2",
       discountedPrice: "$3.99",
       rating: 4,
+      discount: 50, // 50% discount
+      sold: 30, // 30 items sold
+      stock: 50, // 50 items in stock
     },
     {
       image:
         "https://m.media-amazon.com/images/I/31n+3fjNM1L._SY300_SX300_.jpg",
+      typeName: "Vegetables",
       title: "Garlic 1kg",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.1,
+      discount: 20, // 20% discount
+      sold: 40, // 40 items sold
+      stock: 50, // 50 items in stock
     },
     {
       image:
         "https://m.media-amazon.com/images/I/31WtrNh0M8L._SX300_SY300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Potatoes 1kg",
       price: "$1",
       discountedPrice: "$1.99",
       rating: 4.5,
+      discount: 15, // 15% discount
+      sold: 20, // 20 items sold
+      stock: 50, // 50 items in stock
     },
     {
       image:
         "https://m.media-amazon.com/images/I/41NQU28BzEL._SY300_SX300_QL70_FMwebp_.jpg",
+      typeName: "Vegetables",
       title: "Tomato 200g",
       price: "$0.30",
       discountedPrice: "$0.99",
       rating: 3.5,
+      discount: 10, // 10% discount
+      sold: 25, // 25 items sold
+      stock: 50, // 50 items in stock
     },
   ];
 
@@ -513,6 +532,14 @@ function ProductShow() {
     ],
   };
 
+  const handlePrevious = () => {
+    console.log("Previous clicked");
+  };
+
+  const handleNext = () => {
+    console.log("Next clicked");
+  };
+
   return (
     <AppContainer style={{ marginTop: "75px" }}>
       <Slider {...settings}>
@@ -532,9 +559,17 @@ function ProductShow() {
 
       <Banner />
 
-      <DailyDealsSection>
+      <DailyDealsSection style={{ margin: "0px" }}>
         <HeaderRow>
-          <h2>Daily Best Sells</h2>
+          <h3
+            style={{
+              marginLeft: "20px",
+              fontSize: "20px",
+              marginRight: "30px",
+            }}
+          >
+            Daily Best Sells
+          </h3>
           {/* Navigation Tabs */}
           <Box display="flex" gap={2} alignItems="center">
             {tabs.map((tab) => (
@@ -547,7 +582,7 @@ function ProductShow() {
                   textTransform: "none",
                   fontWeight: selectedTab === tab ? "bold" : "normal",
                   color: selectedTab === tab ? "#f19f09" : "#fffff",
-                  fontSize: "1.1rem",
+                  fontSize: "1rem",
                   backgroundColor: "#37612a",
                 }}
               >
@@ -556,6 +591,43 @@ function ProductShow() {
             ))}
           </Box>
           <CountDown />
+          {/* Arrow Icons for Navigation */}
+          <Box
+            display="flex"
+            alignItems="center"
+            gap={1}
+            ml="auto"
+            sx={{ marginRight: "20px" }}
+          >
+            <IconButton
+              onClick={handlePrevious}
+              sx={{
+                border: "1px solid white",
+                fontSize: "10px",
+                color: "#ffffff",
+                backgroundColor: "#ee490e",
+                padding: "15px",
+                width: "12px",
+                height: "12px",
+              }}
+            >
+              <ArrowBackIcon />
+            </IconButton>
+            <IconButton
+              onClick={handleNext}
+              sx={{
+                border: "1px solid white",
+                fontSize: "10px",
+                color: "#ffffff",
+                backgroundColor: "#ee490e",
+                padding: "15px",
+                width: "12px",
+                height: "12px",
+              }}
+            >
+              <ArrowForwardIcon />
+            </IconButton>
+          </Box>
         </HeaderRow>
 
         <ProductSection>
@@ -568,9 +640,13 @@ function ProductShow() {
                 price={product.price}
                 discountedPrice={product.discountedPrice}
                 rating={product.rating}
+                discount={product.discount}
+                sold={product.sold}
+                totalStock={product.stock}
               />
             </ProductCardWrapper>
           ))}
+
           <SignupBanner />
         </ProductSection>
       </DailyDealsSection>

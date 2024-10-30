@@ -20,9 +20,21 @@ const CountDown = () => {
   }, [time]);
 
   return (
-    <Box display="flex" alignItems="center" my={2}>
+    <Box
+      display="flex"
+      alignItems="center"
+      my={2}
+      sx={{
+        backgroundColor: "#ee490e",
+        padding: 1,
+        paddingLeft: 2,
+        paddingRight: 2,
+        borderRadius: 1,
+        marginLeft: 5,
+      }}
+    >
       <AccessTimeIcon />
-      <Typography variant="h6" ml={1}>
+      <Typography variant="h8" ml={1}>
         Expires in: {`${time.hours}:${time.minutes}:${time.seconds}`}
       </Typography>
     </Box>

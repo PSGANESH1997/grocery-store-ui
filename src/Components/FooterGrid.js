@@ -151,6 +151,7 @@ const FooterGrid = () => {
                       color={i < item.rating ? "#ffc107" : "#e4e5e9"}
                     />
                   ))}
+                  <span>({item.rating})</span>
                 </Rating>
                 <PriceContainer>
                   <Price>{item.price}</Price>
@@ -207,8 +208,8 @@ const Item = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-right: 10px;
 
   img {
@@ -223,13 +224,14 @@ const Info = styled.div`
 `;
 
 const ItemName = styled.div`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
 `;
 
 const Rating = styled.div`
   display: flex;
   margin: 5px 0;
+  font-size: 0.7rem;
 `;
 
 const PriceContainer = styled.div`
@@ -240,8 +242,9 @@ const PriceContainer = styled.div`
 const Price = styled.span`
   color: #ffe600;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   margin-right: 5px;
+  margin-bottom: 5px;
 `;
 
 const OriginalPrice = styled.span`

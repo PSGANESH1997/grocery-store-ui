@@ -49,7 +49,7 @@ const Banner = () => {
 // Styling for the main container
 const Container = styled.div`
   display: flex;
-  margin-top: 25px;
+  margin: 25px;
   gap: 20px;
   justify-content: center;
   background-color: #37612a;
@@ -121,7 +121,7 @@ const ImageWrapper = styled.div`
   position: absolute;
   right: 1px;
   width: 200px;
-  height: 310px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
